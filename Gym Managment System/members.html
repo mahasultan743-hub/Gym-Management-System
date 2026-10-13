@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - Gym Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         MEMBER MANAGEMENT PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation (Same as Dashboard) -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">GYM</div>
+                <h2>FitPro</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- Active Page: Members -->
+                <a href="members.html" class="nav-item active">
+                    <span class="nav-icon">👥</span>
+                    <span>Members</span>
+                </a>
+
+                <a href="trainers.html" class="nav-item">
+                    <span class="nav-icon">💪</span>
+                    <span>Trainers</span>
+                </a>
+
+                <a href="classes.html" class="nav-item">
+                    <span class="nav-icon">📅</span>
+                    <span>Classes</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <span class="nav-icon">💳</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <div class="logout-section">
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <div>
+                    <h1>Member Management</h1>
+                    <p style="color: var(--text-secondary);">Manage all gym members and their memberships</p>
+                </div>
+                
+                <div class="header-actions">
+                    <!-- Add New Member Button (UI Only) -->
+                    <button class="btn btn-primary">+ Add New Member</button>
+                </div>
+            </header>
+
+            <!-- Member Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card members">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Members</div>
+                            <div class="stat-value">1,245</div>
+                            <div class="stat-change">Active Members</div>
+                        </div>
+                        <div class="stat-icon">👥</div>
+                    </div>
+                </div>
+
+                <div class="stat-card plans">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">New This Month</div>
+                            <div class="stat-value">87</div>
+                            <div class="stat-change">↑ 12% increase</div>
+                        </div>
+                        <div class="stat-icon">📈</div>
+                    </div>
+                </div>
+
+                <div class="stat-card trainers">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Expiring Soon</div>
+                            <div class="stat-value">45</div>
+                            <div class="stat-change">Within 7 days</div>
+                        </div>
+                        <div class="stat-icon">⚠️</div>
+                    </div>
+                </div>
+
+                <div class="stat-card revenue">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Inactive Members</div>
+                            <div class="stat-value">23</div>
+                            <div class="stat-change">Needs attention</div>
+                        </div>
+                        <div class="stat-icon">💤</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Members List Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>All Members</h2>
+                </div>
+
+                <!-- Search and Filter Bar -->
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search members by name, ID, or email...">
+                    </div>
+                    
+                    <select class="filter-select">
+                        <option>All Memberships</option>
+                        <option>Basic</option>
+                        <option>Premium</option>
+                        <option>Gold</option>
+                    </select>
+
+                    <select class="filter-select">
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Pending</option>
+                    </select>
+                </div>
+
+                <!-- Members Data Table -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Member ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Membership Type</th>
+                                <th>Join Date</th>
+                                <th>Expiry Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Member Row 1 -->
+                            <tr>
+                                <td>#M1245</td>
+                                <td>John Smith</td>
+                                <td>john.smith@email.com</td>
+                                <td>(555) 123-4567</td>
+                                <td>Premium</td>
+                                <td>Jan 08, 2026</td>
+                                <td>Jul 08, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 2 -->
+                            <tr>
+                                <td>#M1244</td>
+                                <td>Sarah Johnson</td>
+                                <td>sarah.j@email.com</td>
+                                <td>(555) 234-5678</td>
+                                <td>Basic</td>
+                                <td>Jan 07, 2026</td>
+                                <td>Apr 07, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 3 -->
+                            <tr>
+                                <td>#M1243</td>
+                                <td>Mike Wilson</td>
+                                <td>mike.w@email.com</td>
+                                <td>(555) 345-6789</td>
+                                <td>Gold</td>
+                                <td>Jan 06, 2026</td>
+                                <td>Jan 06, 2027</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 4 -->
+                            <tr>
+                                <td>#M1242</td>
+                                <td>Emily Davis</td>
+                                <td>emily.d@email.com</td>
+                                <td>(555) 456-7890</td>
+                                <td>Premium</td>
+                                <td>Jan 05, 2026</td>
+                                <td>Jul 05, 2026</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 5 -->
+                            <tr>
+                                <td>#M1241</td>
+                                <td>David Brown</td>
+                                <td>david.b@email.com</td>
+                                <td>(555) 567-8901</td>
+                                <td>Basic</td>
+                                <td>Jan 04, 2026</td>
+                                <td>Apr 04, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 6 -->
+                            <tr>
+                                <td>#M1240</td>
+                                <td>Lisa Martinez</td>
+                                <td>lisa.m@email.com</td>
+                                <td>(555) 678-9012</td>
+                                <td>Premium</td>
+                                <td>Jan 03, 2026</td>
+                                <td>Jul 03, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 7 -->
+                            <tr>
+                                <td>#M1239</td>
+                                <td>Robert Taylor</td>
+                                <td>robert.t@email.com</td>
+                                <td>(555) 789-0123</td>
+                                <td>Gold</td>
+                                <td>Jan 02, 2026</td>
+                                <td>Jan 02, 2027</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 8 -->
+                            <tr>
+                                <td>#M1238</td>
+                                <td>Jennifer Lee</td>
+                                <td>jennifer.l@email.com</td>
+                                <td>(555) 890-1234</td>
+                                <td>Basic</td>
+                                <td>Jan 01, 2026</td>
+                                <td>Apr 01, 2026</td>
+                                <td><span class="status-badge status-inactive">Inactive</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 9 -->
+                            <tr>
+                                <td>#M1237</td>
+                                <td>Michael Chen</td>
+                                <td>michael.c@email.com</td>
+                                <td>(555) 901-2345</td>
+                                <td>Premium</td>
+                                <td>Dec 30, 2025</td>
+                                <td>Jun 30, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Member Row 10 -->
+                            <tr>
+                                <td>#M1236</td>
+                                <td>Amanda White</td>
+                                <td>amanda.w@email.com</td>
+                                <td>(555) 012-3456</td>
+                                <td>Gold</td>
+                                <td>Dec 29, 2025</td>
+                                <td>Dec 29, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">✏️ Edit</button>
+                                        <button class="action-btn">🗑️ Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination (UI Only) -->
+                <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem;">
+                    <button class="btn btn-secondary">← Previous</button>
+                    <button class="btn btn-primary">1</button>
+                    <button class="btn btn-secondary">2</button>
+                    <button class="btn btn-secondary">3</button>
+                    <button class="btn btn-secondary">4</button>
+                    <button class="btn btn-secondary">Next →</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         All buttons are for display purposes only.
+         No backend functionality is implemented.
+         ============================================ -->
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule - Gym Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         CLASS SCHEDULE PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">GYM</div>
+                <h2>FitPro</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="members.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Members</span>
+                </a>
+
+                <a href="trainers.html" class="nav-item">
+                    <span class="nav-icon">💪</span>
+                    <span>Trainers</span>
+                </a>
+
+                <!-- Active Page: Classes -->
+                <a href="classes.html" class="nav-item active">
+                    <span class="nav-icon">📅</span>
+                    <span>Classes</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <span class="nav-icon">💳</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <div class="logout-section">
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <div>
+                    <h1>Class Schedule</h1>
+                    <p style="color: var(--text-secondary);">Manage weekly workout classes and sessions</p>
+                </div>
+                
+                <div class="header-actions">
+                    <!-- Add New Class Button (UI Only) -->
+                    <button class="btn btn-primary">+ Schedule New Class</button>
+                </div>
+            </header>
+
+            <!-- Class Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card plans">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Classes</div>
+                            <div class="stat-value">48</div>
+                            <div class="stat-change">This Week</div>
+                        </div>
+                        <div class="stat-icon">📅</div>
+                    </div>
+                </div>
+
+                <div class="stat-card members">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Active Sessions</div>
+                            <div class="stat-value">32</div>
+                            <div class="stat-change">Currently Running</div>
+                        </div>
+                        <div class="stat-icon">🏃</div>
+                    </div>
+                </div>
+
+                <div class="stat-card trainers">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Bookings</div>
+                            <div class="stat-value">687</div>
+                            <div class="stat-change">This Week</div>
+                        </div>
+                        <div class="stat-icon">✅</div>
+                    </div>
+                </div>
+
+                <div class="stat-card revenue">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Avg Attendance</div>
+                            <div class="stat-value">85%</div>
+                            <div class="stat-change">↑ 5% increase</div>
+                        </div>
+                        <div class="stat-icon">📊</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Schedule Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Weekly Schedule - January 2026</h2>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-secondary">← Previous Week</button>
+                        <button class="btn btn-secondary">Next Week →</button>
+                    </div>
+                </div>
+
+                <!-- Schedule Table -->
+                <div class="table-container">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 100px;">Time</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 6:00 AM Time Slot -->
+                            <tr>
+                                <td class="time-slot">6:00 AM</td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Morning Yoga</div>
+                                        <div class="class-trainer">Lisa Anderson</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">HIIT Workout</div>
+                                        <div class="class-trainer">James Rodriguez</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Morning Yoga</div>
+                                        <div class="class-trainer">Lisa Anderson</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">HIIT Workout</div>
+                                        <div class="class-trainer">James Rodriguez</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Morning Yoga</div>
+                                        <div class="class-trainer">Lisa Anderson</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Strength Training</div>
+                                        <div class="class-trainer">Mark Thompson</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <!-- 8:00 AM Time Slot -->
+                            <tr>
+                                <td class="time-slot">8:00 AM</td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Zumba Dance</div>
+                                        <div class="class-trainer">Nina Kim</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">CrossFit</div>
+                                        <div class="class-trainer">Sarah Chen</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Zumba Dance</div>
+                                        <div class="class-trainer">Nina Kim</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">CrossFit</div>
+                                        <div class="class-trainer">Sarah Chen</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Pilates</div>
+                                        <div class="class-trainer">Emily White</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Boxing</div>
+                                        <div class="class-trainer">Alex Brown</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Yoga Flow</div>
+                                        <div class="class-trainer">Lisa Anderson</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 10:00 AM Time Slot -->
+                            <tr>
+                                <td class="time-slot">10:00 AM</td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Strength Training</div>
+                                        <div class="class-trainer">Mark Thompson</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Spinning</div>
+                                        <div class="class-trainer">Ryan Taylor</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Strength Training</div>
+                                        <div class="class-trainer">Mark Thompson</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Spinning</div>
+                                        <div class="class-trainer">Ryan Taylor</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Functional Training</div>
+                                        <div class="class-trainer">Emily White</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">HIIT Bootcamp</div>
+                                        <div class="class-trainer">James Rodriguez</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Bodyweight Training</div>
+                                        <div class="class-trainer">David Martinez</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 2:00 PM Time Slot -->
+                            <tr>
+                                <td class="time-slot">2:00 PM</td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Bodybuilding</div>
+                                        <div class="class-trainer">David Martinez</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Bodybuilding</div>
+                                        <div class="class-trainer">David Martinez</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Bodybuilding</div>
+                                        <div class="class-trainer">David Martinez</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Core Strength</div>
+                                        <div class="class-trainer">Emily White</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <!-- 4:00 PM Time Slot -->
+                            <tr>
+                                <td class="time-slot">4:00 PM</td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Boxing</div>
+                                        <div class="class-trainer">Alex Brown</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">CrossFit</div>
+                                        <div class="class-trainer">Sarah Chen</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Boxing</div>
+                                        <div class="class-trainer">Alex Brown</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">CrossFit</div>
+                                        <div class="class-trainer">Sarah Chen</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">MMA Training</div>
+                                        <div class="class-trainer">Alex Brown</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Zumba Party</div>
+                                        <div class="class-trainer">Nina Kim</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Relaxation Yoga</div>
+                                        <div class="class-trainer">Lisa Anderson</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 6:00 PM Time Slot -->
+                            <tr>
+                                <td class="time-slot">6:00 PM</td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Spinning</div>
+                                        <div class="class-trainer">Ryan Taylor</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">HIIT Express</div>
+                                        <div class="class-trainer">James Rodriguez</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Spinning</div>
+                                        <div class="class-trainer">Ryan Taylor</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">HIIT Express</div>
+                                        <div class="class-trainer">James Rodriguez</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Spinning</div>
+                                        <div class="class-trainer">Ryan Taylor</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="class-slot">
+                                        <div class="class-name">Evening Strength</div>
+                                        <div class="class-trainer">Mark Thompson</div>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Class Types Legend -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Class Types</h2>
+                </div>
+                
+                <div class="trainers-grid">
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green);">💪 Strength Training</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                            Build muscle and increase strength with weights and resistance training.
+                        </p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green);">🏃 HIIT Workouts</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                            High-intensity interval training for maximum calorie burn.
+                        </p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green);">🧘 Yoga & Pilates</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                            Improve flexibility, balance, and mental wellness.
+                        </p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green);">🥊 Boxing & MMA</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                            Combat training for fitness, strength, and self-defense.
+                        </p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green);">🚴 Spinning</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                            Indoor cycling classes with energizing music and coaching.
+                        </p>
+                    </div>
+
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green);">💃 Zumba Dance</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                            Dance fitness party with Latin and international music.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         All schedule data is static for display.
+         No booking or scheduling functionality.
+         ============================================ -->
+</body>
+</html>

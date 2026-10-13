@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments & Memberships - Gym Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         PAYMENTS & MEMBERSHIP PLANS PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">GYM</div>
+                <h2>FitPro</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="members.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Members</span>
+                </a>
+
+                <a href="trainers.html" class="nav-item">
+                    <span class="nav-icon">💪</span>
+                    <span>Trainers</span>
+                </a>
+
+                <a href="classes.html" class="nav-item">
+                    <span class="nav-icon">📅</span>
+                    <span>Classes</span>
+                </a>
+
+                <!-- Active Page: Payments -->
+                <a href="payments.html" class="nav-item active">
+                    <span class="nav-icon">💳</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <div class="logout-section">
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <div>
+                    <h1>Payments & Memberships</h1>
+                    <p style="color: var(--text-secondary);">Manage membership plans and payment records</p>
+                </div>
+            </header>
+
+            <!-- Payment Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card revenue">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Revenue</div>
+                            <div class="stat-value">$48.5K</div>
+                            <div class="stat-change">↑ $6.2K this month</div>
+                        </div>
+                        <div class="stat-icon">💰</div>
+                    </div>
+                </div>
+
+                <div class="stat-card members">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Active Subscriptions</div>
+                            <div class="stat-value">987</div>
+                            <div class="stat-change">↑ 87 new members</div>
+                        </div>
+                        <div class="stat-icon">✅</div>
+                    </div>
+                </div>
+
+                <div class="stat-card plans">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Pending Payments</div>
+                            <div class="stat-value">23</div>
+                            <div class="stat-change">Requires follow-up</div>
+                        </div>
+                        <div class="stat-icon">⏳</div>
+                    </div>
+                </div>
+
+                <div class="stat-card trainers">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Renewals Due</div>
+                            <div class="stat-value">45</div>
+                            <div class="stat-change">Next 7 days</div>
+                        </div>
+                        <div class="stat-icon">🔔</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Membership Plans Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Membership Plans</h2>
+                    <button class="btn btn-primary">+ Create New Plan</button>
+                </div>
+
+                <!-- Plans Grid -->
+                <div class="plans-grid">
+                    <!-- Basic Plan -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Basic Plan</h3>
+                            <div class="plan-price">
+                                $29<span>/month</span>
+                            </div>
+                            <p class="plan-duration">3-Month Commitment</p>
+                        </div>
+
+                        <div class="plan-features">
+                            <ul>
+                                <li>Access to gym equipment</li>
+                                <li>Locker room access</li>
+                                <li>Open gym hours (6 AM - 10 PM)</li>
+                                <li>Basic fitness assessment</li>
+                                <li>Mobile app access</li>
+                                <li>1 guest pass per month</li>
+                            </ul>
+                        </div>
+
+                        <button class="plan-btn">View Details</button>
+                    </div>
+
+                    <!-- Premium Plan (Featured) -->
+                    <div class="plan-card featured">
+                        <span class="featured-badge">MOST POPULAR</span>
+                        <div class="plan-header">
+                            <h3 class="plan-name">Premium Plan</h3>
+                            <div class="plan-price">
+                                $59<span>/month</span>
+                            </div>
+                            <p class="plan-duration">6-Month Commitment</p>
+                        </div>
+
+                        <div class="plan-features">
+                            <ul>
+                                <li>All Basic Plan features</li>
+                                <li>Unlimited group classes</li>
+                                <li>2 personal training sessions/month</li>
+                                <li>Nutrition consultation</li>
+                                <li>Priority class booking</li>
+                                <li>Free workout plan</li>
+                                <li>Sauna & steam room access</li>
+                                <li>3 guest passes per month</li>
+                            </ul>
+                        </div>
+
+                        <button class="plan-btn">View Details</button>
+                    </div>
+
+                    <!-- Gold Plan -->
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3 class="plan-name">Gold Plan</h3>
+                            <div class="plan-price">
+                                $99<span>/month</span>
+                            </div>
+                            <p class="plan-duration">12-Month Commitment</p>
+                        </div>
+
+                        <div class="plan-features">
+                            <ul>
+                                <li>All Premium Plan features</li>
+                                <li>Unlimited personal training</li>
+                                <li>VIP locker with amenities</li>
+                                <li>Massage therapy (2 sessions/month)</li>
+                                <li>Advanced body composition analysis</li>
+                                <li>24/7 gym access</li>
+                                <li>Private training room access</li>
+                                <li>Unlimited guest passes</li>
+                                <li>Free merchandise & supplements</li>
+                            </ul>
+                        </div>
+
+                        <button class="plan-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Payments Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Payment Transactions</h2>
+                    <button class="btn btn-secondary">Export Report</button>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search by member name or transaction ID...">
+                    </div>
+                    
+                    <select class="filter-select">
+                        <option>All Plans</option>
+                        <option>Basic</option>
+                        <option>Premium</option>
+                        <option>Gold</option>
+                    </select>
+
+                    <select class="filter-select">
+                        <option>All Status</option>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>Failed</option>
+                    </select>
+                </div>
+
+                <!-- Payments Table -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Member Name</th>
+                                <th>Plan</th>
+                                <th>Amount</th>
+                                <th>Payment Method</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Payment Row 1 -->
+                            <tr>
+                                <td>#TXN10245</td>
+                                <td>John Smith</td>
+                                <td>Premium</td>
+                                <td>$59.00</td>
+                                <td>Credit Card</td>
+                                <td>Jan 08, 2026</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 2 -->
+                            <tr>
+                                <td>#TXN10244</td>
+                                <td>Sarah Johnson</td>
+                                <td>Basic</td>
+                                <td>$29.00</td>
+                                <td>Debit Card</td>
+                                <td>Jan 07, 2026</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 3 -->
+                            <tr>
+                                <td>#TXN10243</td>
+                                <td>Mike Wilson</td>
+                                <td>Gold</td>
+                                <td>$99.00</td>
+                                <td>Credit Card</td>
+                                <td>Jan 06, 2026</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 4 -->
+                            <tr>
+                                <td>#TXN10242</td>
+                                <td>Emily Davis</td>
+                                <td>Premium</td>
+                                <td>$59.00</td>
+                                <td>Bank Transfer</td>
+                                <td>Jan 05, 2026</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🔄 Retry</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 5 -->
+                            <tr>
+                                <td>#TXN10241</td>
+                                <td>David Brown</td>
+                                <td>Basic</td>
+                                <td>$29.00</td>
+                                <td>Credit Card</td>
+                                <td>Jan 04, 2026</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 6 -->
+                            <tr>
+                                <td>#TXN10240</td>
+                                <td>Lisa Martinez</td>
+                                <td>Premium</td>
+                                <td>$59.00</td>
+                                <td>PayPal</td>
+                                <td>Jan 03, 2026</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 7 -->
+                            <tr>
+                                <td>#TXN10239</td>
+                                <td>Robert Taylor</td>
+                                <td>Gold</td>
+                                <td>$99.00</td>
+                                <td>Credit Card</td>
+                                <td>Jan 02, 2026</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 8 -->
+                            <tr>
+                                <td>#TXN10238</td>
+                                <td>Jennifer Lee</td>
+                                <td>Basic</td>
+                                <td>$29.00</td>
+                                <td>Cash</td>
+                                <td>Jan 01, 2026</td>
+                                <td><span class="status-badge status-inactive">Failed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🔄 Retry</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 9 -->
+                            <tr>
+                                <td>#TXN10237</td>
+                                <td>Michael Chen</td>
+                                <td>Premium</td>
+                                <td>$59.00</td>
+                                <td>Credit Card</td>
+                                <td>Dec 30, 2025</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Payment Row 10 -->
+                            <tr>
+                                <td>#TXN10236</td>
+                                <td>Amanda White</td>
+                                <td>Gold</td>
+                                <td>$99.00</td>
+                                <td>Debit Card</td>
+                                <td>Dec 29, 2025</td>
+                                <td><span class="status-badge status-active">Completed</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="action-btn">👁️ View</button>
+                                        <button class="action-btn">🖨️ Receipt</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Revenue Chart Section (UI Representation) -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Monthly Revenue Overview</h2>
+                </div>
+                
+                <div style="padding: 2rem; text-align: center;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
+                        <!-- Revenue Bars (Visual Representation) -->
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <div style="width: 60px; height: 120px; background: linear-gradient(to top, var(--neon-green), rgba(0, 255, 136, 0.3)); border-radius: 0.5rem;"></div>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Jan</span>
+                            <span style="font-weight: bold;">$48K</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <div style="width: 60px; height: 110px; background: linear-gradient(to top, var(--neon-orange), rgba(255, 107, 53, 0.3)); border-radius: 0.5rem;"></div>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Dec</span>
+                            <span style="font-weight: bold;">$42K</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <div style="width: 60px; height: 100px; background: linear-gradient(to top, #64c8ff, rgba(100, 200, 255, 0.3)); border-radius: 0.5rem;"></div>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Nov</span>
+                            <span style="font-weight: bold;">$38K</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <div style="width: 60px; height: 95px; background: linear-gradient(to top, var(--neon-green), rgba(0, 255, 136, 0.3)); border-radius: 0.5rem;"></div>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Oct</span>
+                            <span style="font-weight: bold;">$36K</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <div style="width: 60px; height: 105px; background: linear-gradient(to top, var(--neon-orange), rgba(255, 107, 53, 0.3)); border-radius: 0.5rem;"></div>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Sep</span>
+                            <span style="font-weight: bold;">$40K</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <div style="width: 60px; height: 90px; background: linear-gradient(to top, #64c8ff, rgba(100, 200, 255, 0.3)); border-radius: 0.5rem;"></div>
+                            <span style="font-size: 0.85rem; color: var(--text-secondary);">Aug</span>
+                            <span style="font-weight: bold;">$35K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         No payment processing functionality.
+         All data is for display purposes only.
+         ============================================ -->
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Settings - Gym Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         PROFILE & SETTINGS PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">GYM</div>
+                <h2>FitPro</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="members.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Members</span>
+                </a>
+
+                <a href="trainers.html" class="nav-item">
+                    <span class="nav-icon">💪</span>
+                    <span>Trainers</span>
+                </a>
+
+                <a href="classes.html" class="nav-item">
+                    <span class="nav-icon">📅</span>
+                    <span>Classes</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <span class="nav-icon">💳</span>
+                    <span>Payments</span>
+                </a>
+
+                <!-- Active Page: Profile -->
+                <a href="profile.html" class="nav-item active">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <div class="logout-section">
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <div>
+                    <h1>Profile & Settings</h1>
+                    <p style="color: var(--text-secondary);">Manage your account information and preferences</p>
+                </div>
+            </header>
+
+            <!-- Profile Grid Layout -->
+            <div class="profile-grid">
+                <!-- Profile Sidebar -->
+                <div class="profile-sidebar">
+                    <!-- Large Avatar -->
+                    <div class="profile-avatar-large">AD</div>
+                    
+                    <!-- Profile Info -->
+                    <h2 class="profile-name">Admin User</h2>
+                    <p class="profile-role">System Administrator</p>
+
+                    <!-- Profile Statistics -->
+                    <div class="profile-stats">
+                        <div class="profile-stat">
+                            <div class="profile-stat-value">1,245</div>
+                            <div class="profile-stat-label">Members</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-value">24</div>
+                            <div class="profile-stat-label">Trainers</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-value">48</div>
+                            <div class="profile-stat-label">Classes</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+                        <h3 style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Quick Links</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <button class="btn btn-secondary" style="width: 100%; justify-content: center;">
+                                📄 View Activity Log
+                            </button>
+                            <button class="btn btn-secondary" style="width: 100%; justify-content: center;">
+                                🔐 Change Password
+                            </button>
+                            <button class="btn btn-secondary" style="width: 100%; justify-content: center;">
+                                🔔 Notification Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Main Content -->
+                <div class="profile-main">
+                    <div class="section-header">
+                        <h2>Personal Information</h2>
+                    </div>
+
+                    <!-- Profile Edit Form (UI Only) -->
+                    <form class="profile-form">
+                        <!-- Name Fields Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    value="Admin"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    value="User"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                value="admin@fitpro.com"
+                            >
+                        </div>
+
+                        <!-- Phone Field -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                value="+1 (555) 123-4567"
+                            >
+                        </div>
+
+                        <!-- Address Field -->
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input 
+                                type="text" 
+                                id="address" 
+                                name="address" 
+                                value="123 Fitness Street, Gym City, GC 12345"
+                            >
+                        </div>
+
+                        <!-- Role and Department Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="role">Role</label>
+                                <select id="role" name="role" class="filter-select" style="width: 100%; padding: 0.875rem 1rem;">
+                                    <option selected>System Administrator</option>
+                                    <option>Gym Manager</option>
+                                    <option>Front Desk</option>
+                                    <option>Trainer</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="department">Department</label>
+                                <select id="department" name="department" class="filter-select" style="width: 100%; padding: 0.875rem 1rem;">
+                                    <option selected>Management</option>
+                                    <option>Operations</option>
+                                    <option>Training</option>
+                                    <option>Sales</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Join Date and Status Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="joinDate">Join Date</label>
+                                <input 
+                                    type="date" 
+                                    id="joinDate" 
+                                    name="joinDate" 
+                                    value="2024-01-15"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select id="status" name="status" class="filter-select" style="width: 100%; padding: 0.875rem 1rem;">
+                                    <option selected>Active</option>
+                                    <option>On Leave</option>
+                                    <option>Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Bio/About Section -->
+                        <div class="form-group">
+                            <label for="bio">Bio / About</label>
+                            <textarea 
+                                id="bio" 
+                                name="bio" 
+                                rows="4"
+                                style="width: 100%; padding: 0.875rem 1rem; background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--text-primary); font-family: inherit; resize: vertical;"
+                            >System administrator with over 5 years of experience in gym management. Passionate about fitness and helping members achieve their goals.</textarea>
+                        </div>
+
+                        <!-- Form Action Buttons -->
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Security Settings Section -->
+            <div class="content-section" style="margin-top: 1.5rem;">
+                <div class="section-header">
+                    <h2>Security Settings</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <!-- Password Change -->
+                    <div style="padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--neon-green);">🔐 Password</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                            Last changed 45 days ago
+                        </p>
+                        <button class="btn btn-secondary" style="width: 100%;">Change Password</button>
+                    </div>
+
+                    <!-- Two-Factor Authentication -->
+                    <div style="padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--neon-green);">📱 Two-Factor Authentication</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                            Status: <span class="status-badge status-active">Enabled</span>
+                        </p>
+                        <button class="btn btn-secondary" style="width: 100%;">Manage 2FA</button>
+                    </div>
+
+                    <!-- Session Management -->
+                    <div style="padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--neon-green);">💻 Active Sessions</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+                            3 active sessions detected
+                        </p>
+                        <button class="btn btn-secondary" style="width: 100%;">View Sessions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Preferences Section -->
+            <div class="content-section" style="margin-top: 1.5rem;">
+                <div class="section-header">
+                    <h2>Notification Preferences</h2>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- Email Notifications -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">📧 Email Notifications</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Receive updates via email</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 60px; height: 30px;">
+                            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+                            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--neon-green); border-radius: 30px; transition: 0.4s;"></span>
+                        </label>
+                    </div>
+
+                    <!-- Push Notifications -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">🔔 Push Notifications</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Receive push notifications</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 60px; height: 30px;">
+                            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+                            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--neon-green); border-radius: 30px; transition: 0.4s;"></span>
+                        </label>
+                    </div>
+
+                    <!-- SMS Notifications -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">📱 SMS Notifications</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Receive text messages</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 60px; height: 30px;">
+                            <input type="checkbox" style="opacity: 0; width: 0; height: 0;">
+                            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--border-color); border-radius: 30px; transition: 0.4s;"></span>
+                        </label>
+                    </div>
+
+                    <!-- Weekly Reports -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: var(--secondary-bg); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">📊 Weekly Reports</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Receive weekly performance reports</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 60px; height: 30px;">
+                            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+                            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--neon-green); border-radius: 30px; transition: 0.4s;"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Actions Section -->
+            <div class="content-section" style="margin-top: 1.5rem;">
+                <div class="section-header">
+                    <h2>Account Actions</h2>
+                </div>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn btn-secondary">
+                        📥 Download My Data
+                    </button>
+                    <button class="btn btn-secondary">
+                        📋 Export Reports
+                    </button>
+                    <button class="btn btn-secondary">
+                        🔄 Reset Preferences
+                    </button>
+                    <button class="btn btn-danger">
+                        🗑️ Deactivate Account
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         All form inputs and buttons are non-functional.
+         No data is saved or processed.
+         ============================================ -->
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainers - Gym Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         TRAINER MANAGEMENT PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">GYM</div>
+                <h2>FitPro</h2>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="members.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Members</span>
+                </a>
+
+                <!-- Active Page: Trainers -->
+                <a href="trainers.html" class="nav-item active">
+                    <span class="nav-icon">💪</span>
+                    <span>Trainers</span>
+                </a>
+
+                <a href="classes.html" class="nav-item">
+                    <span class="nav-icon">📅</span>
+                    <span>Classes</span>
+                </a>
+
+                <a href="payments.html" class="nav-item">
+                    <span class="nav-icon">💳</span>
+                    <span>Payments</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <div class="logout-section">
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <div>
+                    <h1>Trainer Management</h1>
+                    <p style="color: var(--text-secondary);">Manage gym trainers and their specializations</p>
+                </div>
+                
+                <div class="header-actions">
+                    <!-- Add New Trainer Button (UI Only) -->
+                    <button class="btn btn-primary">+ Add New Trainer</button>
+                </div>
+            </header>
+
+            <!-- Trainer Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card trainers">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Trainers</div>
+                            <div class="stat-value">24</div>
+                            <div class="stat-change">Active Staff</div>
+                        </div>
+                        <div class="stat-icon">💪</div>
+                    </div>
+                </div>
+
+                <div class="stat-card members">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Certified Trainers</div>
+                            <div class="stat-value">22</div>
+                            <div class="stat-change">91.7% certified</div>
+                        </div>
+                        <div class="stat-icon">🏆</div>
+                    </div>
+                </div>
+
+                <div class="stat-card plans">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Active Sessions</div>
+                            <div class="stat-value">156</div>
+                            <div class="stat-change">This week</div>
+                        </div>
+                        <div class="stat-icon">📅</div>
+                    </div>
+                </div>
+
+                <div class="stat-card revenue">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Avg Rating</div>
+                            <div class="stat-value">4.8</div>
+                            <div class="stat-change">⭐ Excellent</div>
+                        </div>
+                        <div class="stat-icon">⭐</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trainers Grid Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>All Trainers</h2>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search trainers by name or specialization...">
+                    </div>
+                    
+                    <select class="filter-select">
+                        <option>All Specializations</option>
+                        <option>Strength Training</option>
+                        <option>Cardio</option>
+                        <option>Yoga</option>
+                        <option>CrossFit</option>
+                        <option>HIIT</option>
+                    </select>
+                </div>
+
+                <!-- Trainers Cards Grid -->
+                <div class="trainers-grid">
+                    <!-- Trainer Card 1 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">MT</div>
+                        <h3 class="trainer-name">Mark Thompson</h3>
+                        <p class="trainer-specialty">Strength Training Specialist</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 mark.thompson@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2001
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 8 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.9/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 2 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">LA</div>
+                        <h3 class="trainer-name">Lisa Anderson</h3>
+                        <p class="trainer-specialty">Yoga & Pilates Instructor</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 lisa.anderson@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2002
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 6 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 5.0/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 3 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">JR</div>
+                        <h3 class="trainer-name">James Rodriguez</h3>
+                        <p class="trainer-specialty">HIIT & Cardio Expert</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 james.rodriguez@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2003
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 7 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.8/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 4 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">SC</div>
+                        <h3 class="trainer-name">Sarah Chen</h3>
+                        <p class="trainer-specialty">CrossFit Coach</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 sarah.chen@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2004
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 5 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.7/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 5 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">DM</div>
+                        <h3 class="trainer-name">David Martinez</h3>
+                        <p class="trainer-specialty">Bodybuilding & Nutrition</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 david.martinez@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2005
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 10 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.9/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 6 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">EW</div>
+                        <h3 class="trainer-name">Emily White</h3>
+                        <p class="trainer-specialty">Functional Training</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 emily.white@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2006
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 4 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.8/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 7 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">RT</div>
+                        <h3 class="trainer-name">Ryan Taylor</h3>
+                        <p class="trainer-specialty">Spin & Cycling Coach</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 ryan.taylor@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2007
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 5 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.6/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 8 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">NK</div>
+                        <h3 class="trainer-name">Nina Kim</h3>
+                        <p class="trainer-specialty">Zumba & Dance Fitness</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 nina.kim@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2008
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 6 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.9/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+
+                    <!-- Trainer Card 9 -->
+                    <div class="trainer-card">
+                        <div class="trainer-avatar">AB</div>
+                        <h3 class="trainer-name">Alex Brown</h3>
+                        <p class="trainer-specialty">Boxing & MMA</p>
+                        
+                        <div class="trainer-info">
+                            <div class="trainer-info-item">
+                                📧 alex.brown@fitpro.com
+                            </div>
+                            <div class="trainer-info-item">
+                                📞 (555) 100-2009
+                            </div>
+                            <div class="trainer-info-item">
+                                🏅 Certified | 9 Years Experience
+                            </div>
+                            <div class="trainer-info-item">
+                                ⭐ Rating: 4.8/5.0
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-actions">
+                            <button class="btn btn-primary" style="flex: 1;">View Profile</button>
+                            <button class="btn btn-secondary">✏️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         All trainer information is for display purposes.
+         No backend functionality is implemented.
+         ============================================ -->
+</body>
+</html>

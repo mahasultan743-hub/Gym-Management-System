@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gym Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         DASHBOARD PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <!-- Logo Section -->
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">GYM</div>
+                <h2>FitPro</h2>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <!-- Active Page: Dashboard -->
+                <a href="dashboard.html" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- Members Page Link -->
+                <a href="members.html" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Members</span>
+                </a>
+
+                <!-- Trainers Page Link -->
+                <a href="trainers.html" class="nav-item">
+                    <span class="nav-icon">💪</span>
+                    <span>Trainers</span>
+                </a>
+
+                <!-- Classes Page Link -->
+                <a href="classes.html" class="nav-item">
+                    <span class="nav-icon">📅</span>
+                    <span>Classes</span>
+                </a>
+
+                <!-- Payments Page Link -->
+                <a href="payments.html" class="nav-item">
+                    <span class="nav-icon">💳</span>
+                    <span>Payments</span>
+                </a>
+
+                <!-- Profile Page Link -->
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+
+            <!-- Logout Section -->
+            <div class="logout-section">
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p style="color: var(--text-secondary);">Welcome back, Admin!</p>
+                </div>
+                
+                <!-- User Info Display -->
+                <div class="header-actions">
+                    <div class="user-info">
+                        <div class="user-avatar">AD</div>
+                        <div class="user-details">
+                            <span>Admin User</span>
+                            <span class="user-role">System Administrator</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Statistics Cards Grid -->
+            <div class="stats-grid">
+                <!-- Total Members Card -->
+                <div class="stat-card members">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Members</div>
+                            <div class="stat-value">1,245</div>
+                            <div class="stat-change">↑ 12% from last month</div>
+                        </div>
+                        <div class="stat-icon">👥</div>
+                    </div>
+                </div>
+
+                <!-- Active Plans Card -->
+                <div class="stat-card plans">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Active Plans</div>
+                            <div class="stat-value">987</div>
+                            <div class="stat-change">↑ 8% from last month</div>
+                        </div>
+                        <div class="stat-icon">📋</div>
+                    </div>
+                </div>
+
+                <!-- Total Trainers Card -->
+                <div class="stat-card trainers">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Total Trainers</div>
+                            <div class="stat-value">24</div>
+                            <div class="stat-change">↑ 2 new this month</div>
+                        </div>
+                        <div class="stat-icon">💪</div>
+                    </div>
+                </div>
+
+                <!-- Monthly Revenue Card -->
+                <div class="stat-card revenue">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-label">Monthly Revenue</div>
+                            <div class="stat-value">$48.5K</div>
+                            <div class="stat-change">↑ 15% from last month</div>
+                        </div>
+                        <div class="stat-icon">💰</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Members Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Recent Members</h2>
+                    <a href="members.html" class="btn btn-secondary">View All</a>
+                </div>
+
+                <!-- Recent Members Table -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Member ID</th>
+                                <th>Name</th>
+                                <th>Membership</th>
+                                <th>Join Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#M1245</td>
+                                <td>John Smith</td>
+                                <td>Premium</td>
+                                <td>Jan 08, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>#M1244</td>
+                                <td>Sarah Johnson</td>
+                                <td>Basic</td>
+                                <td>Jan 07, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>#M1243</td>
+                                <td>Mike Wilson</td>
+                                <td>Gold</td>
+                                <td>Jan 06, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>#M1242</td>
+                                <td>Emily Davis</td>
+                                <td>Premium</td>
+                                <td>Jan 05, 2026</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>#M1241</td>
+                                <td>David Brown</td>
+                                <td>Basic</td>
+                                <td>Jan 04, 2026</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Today's Classes Section -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Today's Classes</h2>
+                    <a href="classes.html" class="btn btn-secondary">Full Schedule</a>
+                </div>
+
+                <!-- Today's Classes Grid -->
+                <div class="trainers-grid">
+                    <!-- Morning Yoga Class -->
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green); margin-bottom: 0.5rem;">Morning Yoga</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                ⏰ 6:00 AM - 7:00 AM
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                👤 Trainer: Lisa Anderson
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                👥 Capacity: 15/20
+                            </div>
+                        </div>
+                        <span class="status-badge status-active">Available</span>
+                    </div>
+
+                    <!-- HIIT Training Class -->
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green); margin-bottom: 0.5rem;">HIIT Training</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                ⏰ 10:00 AM - 11:00 AM
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                👤 Trainer: Mark Thompson
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                👥 Capacity: 18/20
+                            </div>
+                        </div>
+                        <span class="status-badge status-active">Available</span>
+                    </div>
+
+                    <!-- Spin Class -->
+                    <div class="trainer-card">
+                        <h3 style="color: var(--neon-green); margin-bottom: 0.5rem;">Spin Class</h3>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                ⏰ 6:00 PM - 7:00 PM
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                👤 Trainer: James Rodriguez
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                👥 Capacity: 20/20
+                            </div>
+                        </div>
+                        <span class="status-badge status-inactive">Full</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         All data is static and for display purposes.
+         No backend functionality is implemented.
+         ============================================ -->
+</body>
+</html>

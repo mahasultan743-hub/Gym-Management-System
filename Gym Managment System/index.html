@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gym Management System</title>
+    <!-- Link to main stylesheet -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- ============================================
+         LOGIN PAGE
+         University Project - Interface Only
+         ============================================ -->
+    
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Gym Logo Section -->
+            <div class="login-logo">
+                <div class="logo-icon">GYM</div>
+                <h1>FitPro Gym</h1>
+                <p>Management System</p>
+            </div>
+
+            <!-- Login Form (UI Only - No Backend) -->
+            <form class="login-form" action="dashboard.html">
+                <!-- Email Input Group -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="admin@fitpro.com"
+                        required
+                    >
+                </div>
+
+                <!-- Password Input Group -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <!-- Remember Me & Forgot Password Options -->
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">
+                    Login to Dashboard
+                </button>
+            </form>
+
+            <!-- Additional Login Info -->
+            <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.85rem;">
+                Demo Credentials: admin@fitpro.com / admin123
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         NOTE: This is a UI prototype only.
+         No JavaScript or backend functionality is implemented.
+         Clicking "Login" will navigate to dashboard.html
+         ============================================ -->
+</body>
+</html>
